@@ -1,0 +1,25 @@
+.typewriter {
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: white;
+  position: relative;
+}
+
+.typewriter::after {
+  content: "|";
+  color: white;
+  font-weight: bolder;
+  position: absolute;
+  right: -5px;
+  top: -1.5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}

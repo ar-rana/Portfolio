@@ -1,10 +1,17 @@
-import React from 'react';
+import React from "react";
+import ParticleEffect from "./components/ParticleEffect/ParticleEffect";
+import PrettyButton from "./components/PrettyButton/PrettyButton";
+import TypingText from "./components/TypingText/TypingText";
 
 function App() {
-
   return (
-    <div>Hello World!!</div>
-  )
+    <div>
+      <TypingText text="Hello World!!" speed={200}/>
+      <br />
+      <ParticleEffect />
+      <PrettyButton />
+    </div>
+  );
 }
 
-export default App
+export default App;
