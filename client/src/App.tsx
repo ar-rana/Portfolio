@@ -1,17 +1,13 @@
-import ParticleEffect from "./components/ParticleEffect/ParticleEffect";
-import PrettyButton from "./components/PrettyButton/PrettyButton";
-import TypingText from "./components/TypingText/TypingText";
-import EmergeButton from "./components/EmergeButton/EmergeButton";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home";
 
 function App() {
   return (
-    <div>
-      <TypingText text="Hello World!!" speed={200}/>
-      <br />
-      <ParticleEffect />
-      <EmergeButton text="Hellooo"/>
-      <PrettyButton />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

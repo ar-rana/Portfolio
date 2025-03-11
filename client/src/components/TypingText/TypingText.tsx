@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import style from "./typingText.module.css";
 
 interface Props {
-  text: string;
+  text: string[];
   speed: number;
 }
 
@@ -11,10 +11,13 @@ const TypingText: React.FC<Props> = ({text, speed}) => {
   const paused = useRef<boolean>(false);
   const spanRef = useRef<HTMLSpanElement | null>(null);
 
+  const str = useRef<number>(0);
+  const string = useRef<string>(text[0]);
+
   const typeWriter = () => {
     if (paused.current) return;
-    if (idx.current < text.length) {
-      spanRef.current!.innerHTML += text.charAt(idx.current);
+    if (idx.current < string.current.length) { //text
+      spanRef.current!.innerHTML += string.current.charAt(idx.current); //text
       idx.current += 1;
     } else {
       paused.current = true;
@@ -22,6 +25,10 @@ const TypingText: React.FC<Props> = ({text, speed}) => {
       setTimeout(() => {
         spanRef.current!.innerHTML = "";
         paused.current = false;
+
+        str.current++
+        if (str.current == text.length) str.current = 0;
+        string.current = text[str.current];
       }, 1300);
     }
   };

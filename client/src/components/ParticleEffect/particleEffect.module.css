@@ -18,9 +18,9 @@
   /* font-weight: bold; */
   color: whitesmoke;
   margin: 0px 17px;
-  text-shadow: 0 0 2px white, 0 0 3px gray;
-  animation: animate 15s linear infinite;
-  animation-duration: calc(150s / var(--i));
+  text-shadow: 0 0 1px white, 0 0 2px gray;
+  animation: animate linear infinite;
+  animation-duration: calc(200s / var(--i));
 }
 .bubble span:nth-child(even) {
   text-shadow: 0 0 2px white, 0 0 3px gray;
@@ -28,10 +28,8 @@
 @keyframes animate {
   0% {
     transform: translateY(100vh) scale(0.5) rotate(0deg);
-    /* transform: rotate(0deg); */
   }
   100% {
-    transform: translateY(0vh) scale(1) rotate(720deg);
-    /* transform: ; */
+    transform: translateY(-5vh) scale(0.9) rotate(720deg);
   }
 }

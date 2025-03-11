@@ -14,7 +14,7 @@ const ParticleEffect: React.FC = () => {
         <span style={{ "--i": 13 } as React.CSSProperties} className="fa fa-asterisk"></span>
         <span style={{ "--i": 17 } as React.CSSProperties} className="fa fa-certificate"></span>
         <span style={{ "--i": 27 } as React.CSSProperties} className="fa fa-asterisk"></span>
-        <span style={{ "--i": 25 } as React.CSSProperties} className="fa fa-asterisk"></span>
+        {/* <span style={{ "--i": 25 } as React.CSSProperties} className="fa fa-asterisk"></span> */}
         <span style={{ "--i": 16 } as React.CSSProperties} className="fa fa-asterisk"></span>
         <span style={{ "--i": 14 } as React.CSSProperties} className="fa fa-asterisk"></span>
         <span style={{ "--i": 18 } as React.CSSProperties} className="fa fa-certificate"></span>
