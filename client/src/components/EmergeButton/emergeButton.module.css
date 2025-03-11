@@ -1,0 +1,27 @@
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 4px 13px;
+  border-radius: 12px;
+}
+
+@keyframes shadow-pop {
+  0% {
+    box-shadow: none;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px 1px white, 1px 1px white, 2px 2px white, 2px 2px white,
+      2px 2px white, 3px 3px white, 3px 3px white, 3.5px 3.5px white;
+    transform: translateX(-3px) translateY(-3px);
+  }
+}
+
+.btn:hover {
+  animation: shadow-pop 0.2s both;
+}

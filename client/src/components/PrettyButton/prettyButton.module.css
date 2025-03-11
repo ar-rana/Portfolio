@@ -36,7 +36,7 @@
     #ff0000
   );
   position: absolute;
-  top: -2px;
+  top: -3px;
   left: -2px;
   background-size: 600%;
   z-index: -1;
@@ -44,7 +44,7 @@
   height: calc(100% + 4px);
   filter: blur(3px);
 
-  animation: glowing 20s linear infinite;
+  animation: glowing 16s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
   opacity: 0;
