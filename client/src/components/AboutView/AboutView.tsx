@@ -11,9 +11,9 @@ const AboutView = () => {
         <br />
         <span className={styles.about_text}>
           I am a Computer Science & Systems Engineering student who enjoys
-          building scalable application and learning about cloud technologies.
+          building scalable application and exploring cloud technologies.
           Apart from tech, my interests involve outdoor activities like running
-          and football.
+          and football. I am also very keen about geopolitics and world afairs. 
         </span>
         <br />
         <div className={styles.inline_text}>

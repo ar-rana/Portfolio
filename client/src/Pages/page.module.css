@@ -49,3 +49,21 @@
   transform: translateZ(50px);
   box-shadow: 0 0 20px 5px rgba(245, 244, 244, 0.35);
 }
+
+.contact_form {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1.5px solid gray;
+  box-sizing: border-box;
+}
