@@ -7,7 +7,7 @@ const About: React.FC = () => {
   return (
     <div className="about">
       <Clock />
-      <div className="about_container">
+      <div className="section_container">
         <AboutView />
       </div>
       <Navigation />

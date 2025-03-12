@@ -3,6 +3,7 @@
   border: none;
   outline: none;
   color: white; /**color for the text**/
+  background-color: black;
   cursor: pointer;
   position: relative;
   z-index: 0;

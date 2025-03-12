@@ -1,10 +1,14 @@
 import React from 'react';
 import style from "./prettyButton.module.css";
 
-const PrettyButton:React.FC = () => {
+interface Props {
+  text: string;
+  onClick: () => void;
+}
+const PrettyButton:React.FC<Props> = ({ text, onClick }) => {
   return (
     <>
-    <button className={style.btn}>Hello</button>
+    <button className={style.btn} onClick={onClick}>{text}</button>
     </>
   )
 }

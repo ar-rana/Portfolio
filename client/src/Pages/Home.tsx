@@ -1,4 +1,3 @@
-import HomeView from "../components/HomeView/HomeView";
 import styles from "./page.module.css";
 import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
