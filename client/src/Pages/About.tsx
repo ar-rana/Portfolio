@@ -1,9 +1,11 @@
 import React from "react";
 import Navigation from "../components/Navigation/Navigation";
+import Clock from "../components/Clock/Clock";
 
 const About: React.FC = () => {
   return (
     <div className="about">
+      <Clock />
       <div className="about_view">
         <h1 style={{ fontWeight: "bolder" }}>About me.</h1>
         <span className="about_text">
