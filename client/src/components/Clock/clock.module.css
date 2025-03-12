@@ -1,10 +1,10 @@
 .container{
   position: fixed;
-  top: 10;
-  right: 10;
+  top: 4%;
+  right: 4%;
 }
 
-.clock{
+.clock {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;

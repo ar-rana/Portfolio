@@ -18,16 +18,23 @@ body {
     justify-content: center;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     background-color: transparent;
+    overflow-y: auto;
 }
+
+.about_container {
+    width: 80%;
+    height: 75%;
+    overflow-y: auto;}
 
 .nav_container {
     justify-self: flex-start;
     margin-top: 2rem;
 }
 .about_view {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -36,7 +43,8 @@ body {
 .about_text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-.rotate {
-    transform: rotate(calc(-15deg * var(--i)));
+.inline_text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }

@@ -3,9 +3,20 @@ import { Link } from "react-router-dom";
 import style from "./navigation.module.css";
 import EmergeButton from "../EmergeButton/EmergeButton";
 
-const Navigation: React.FC = () => {
+interface Props {
+  home?: boolean;
+}
+
+const Navigation: React.FC<Props> = ({ home = false}) => {
   return (
     <ul className={style.nav_list}>
+      {home ? '' :(
+        <li>
+        <Link to="/">
+          <EmergeButton text="Home" />
+        </Link>
+      </li>
+      )}
       <li>
         <Link to="/about">
           <EmergeButton text="About" />
