@@ -5,8 +5,10 @@ import logo3 from "../assets/logo3.png";
 import Navigation from "../components/Navigation/Navigation";
 import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 import TypingText from "../components/TypingText/TypingText";
+import { useState } from "react";
 
 const Home = () => {
+  const [temp, setTemp] = useState(true);
   const intro = [
     "Aryan Rana",
     "a CS Engineering Student",
@@ -14,6 +16,7 @@ const Home = () => {
   ];
   return (
     <div className="home">
+      <button style={{ position: 'absolute', top: 0, right: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
       <div className={styles.main_container}>
         <img src={logo2} />
         <div className={styles.text_container}>
@@ -22,7 +25,9 @@ const Home = () => {
         </div>
         <Navigation home={true} />
       </div>
-      {/* <ParticleEffect /> */}
+      {temp ? (
+        <ParticleEffect />
+      ): ''}
     </div>
   );
 };

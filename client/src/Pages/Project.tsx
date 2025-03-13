@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import logo3 from "../assets/logo3.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,8 +6,11 @@ import { ProjectPanel } from "../../types";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import PrettyButton from "../components/PrettyButton/PrettyButton";
 import Navigation from "../components/Navigation/Navigation";
+import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 
 const Project = () => {
+  const [temp, setTemp] = useState(false);
+
   const projects: ProjectPanel[] = [
     {
       title: "XYZ",
@@ -45,6 +48,12 @@ const Project = () => {
         ))}
       </div>
       <Navigation />
+
+      <button style={{ position: 'absolute', top: 0, left: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
+      {temp ? (
+        <ParticleEffect />
+      ): ''}
+
     </div>
   );
 };
