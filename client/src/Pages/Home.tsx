@@ -22,7 +22,7 @@ const Home = () => {
         </div>
         <Navigation home={true} />
       </div>
-      <ParticleEffect />
+      {/* <ParticleEffect /> */}
     </div>
   );
 };

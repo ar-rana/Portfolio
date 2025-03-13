@@ -13,7 +13,6 @@
   color: white;
   font-weight: bolder;
   font-size: large;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin-top: 4px;
 }
 
@@ -57,7 +56,6 @@
   justify-content: center;
   padding: 2rem;
 }
-
 .contact_form input,
 .contact_form textarea {
   width: 100%;
@@ -66,4 +64,36 @@
   outline: none;
   border: 1.5px solid gray;
   box-sizing: border-box;
+}
+.loading {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.blog_heading {
+  color: white;
+  font-size: 3rem;
+  padding: 0;
+  margin: 14px;
+}
+.blog_container {
+  width: 90%;
+  height: 75%;
+  overflow-y: auto;
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog_container::-webkit-scrollbar {
+  display: none;
+}
+.blog_bg {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-image: url("../src/assets/blog_bg.svg");
+  z-index: 0;
 }

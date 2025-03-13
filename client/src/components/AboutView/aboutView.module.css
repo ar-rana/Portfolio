@@ -1,19 +1,52 @@
 .nav_container {
-    justify-self: flex-start;
-    margin-top: 2rem;
+  justify-self: flex-start;
+  margin-top: 2rem;
 }
 .about_view {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: white;
 }
 .about_text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .inline_text {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: max-content;
+}
+.certificates {
+  margin-top: 4px;
+  position: relative;
+}
+.certificates:hover ul{
+    display: block;
+}
+.certificates ul {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 100%;
+  left: 5%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.certificates ul li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.certificates ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  padding: 0.5px 8px;
+  border-radius: 25px;
+}
+.certificates ul li a:hover {
+    background-color: rgb(236, 233, 233);
+    color: black;
 }

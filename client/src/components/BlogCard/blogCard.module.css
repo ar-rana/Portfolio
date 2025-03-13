@@ -1,0 +1,33 @@
+.blog_card {
+  max-width: 25rem;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 8px 14px;
+  position: relative;
+}
+.blog_card img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.blog_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 600;
+  padding: 8px;
+}
+.blog_info p {
+  margin: 0;
+}
+.blog_details {
+  color: rgb(207, 210, 212);
+  padding: 6px;
+}
