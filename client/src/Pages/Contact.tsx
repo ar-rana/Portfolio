@@ -13,8 +13,8 @@ const Contact: React.FC = () => {
       <div className="section_container">
         <div className={styles.contact_form}>
           <form>
-            <input type="text" placeholder="Enter subject" required />
-            <input type="text" placeholder="Enter email Id" required />
+            <input type="text" placeholder="Subject" required />
+            <input type="text" placeholder="Your email Id" required />
             <textarea rows={8} placeholder="Content" required />
             <EmergeButton text="Submit" onClick={() => setLoading(prev => !prev)}/>
             {loading ? (

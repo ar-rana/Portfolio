@@ -20,7 +20,7 @@ const Home = () => {
       <div className={styles.main_container}>
         <img src={logo2} />
         <div className={styles.text_container}>
-          <span>Hello, I'm </span>
+          <span style={{backgroundColor: "black"}}>Hello, I'm </span>
           <TypingText text={intro} speed={200} />
         </div>
         <Navigation home={true} />

@@ -27,9 +27,9 @@
 }
 @keyframes animate {
   0% {
-    transform: translateY(100vh) scale(0.5) rotate(0deg);
+    transform: translateY(100vh) scale(0.4) rotate(0deg);
   }
   100% {
-    transform: translateY(-5vh) scale(0.9) rotate(720deg);
+    transform: translateY(-5vh) scale(0.6) rotate(720deg);
   }
 }
