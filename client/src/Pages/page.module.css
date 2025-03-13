@@ -75,7 +75,8 @@
   color: white;
   font-size: 3rem;
   padding: 0;
-  margin: 14px;
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 .blog_container {
   width: 90%;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./page.module.css";
 import logo2 from "../assets/logo2.png";
 import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
@@ -6,6 +6,8 @@ import { BlogPanel } from "../../types";
 import BlogCard from "../components/BlogCard/BlogCard";
 
 const Blog: React.FC = () => {
+  const [temp, setTemp] = useState(true);
+
   const blogs: BlogPanel[] = [
     {
       title: "some small title",
@@ -46,7 +48,9 @@ const Blog: React.FC = () => {
           <BlogCard blog={blog} />
         ))}
       </div>
-      <ParticleEffect />
+      {temp ? (
+        <ParticleEffect />
+      ): ''}
     </div>
   );
 };

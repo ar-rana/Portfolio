@@ -6,6 +6,8 @@ import Navigation from "../components/Navigation/Navigation";
 
 const Contact: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
+  const [temp, setTemp] = useState(true);
+
   return (
     <div className="contact">
       <div className="section_container">
@@ -25,7 +27,12 @@ const Contact: React.FC = () => {
           </form>
         </div>
       </div>
-      <ParticleEffect />
+
+      <button style={{ position: 'absolute', top: 0, left: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
+      {temp ? (
+        <ParticleEffect />
+      ): ''}
+
       <Navigation />
     </div>
   );
