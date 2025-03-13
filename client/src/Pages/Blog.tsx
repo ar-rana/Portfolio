@@ -48,6 +48,8 @@ const Blog: React.FC = () => {
           <BlogCard blog={blog} />
         ))}
       </div>
+
+      <button style={{ position: 'absolute', top: 0, left: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
       {temp ? (
         <ParticleEffect />
       ): ''}

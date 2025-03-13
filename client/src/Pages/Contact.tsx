@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
             <input type="text" placeholder="Enter subject" required />
             <input type="text" placeholder="Enter email Id" required />
             <textarea rows={8} placeholder="Content" required />
-            <EmergeButton text="Submit" />
+            <EmergeButton text="Submit" onClick={() => setLoading(prev => !prev)}/>
             {loading ? (
               <span
                 className={`${styles.loading} fa fa-circle-o-notch fa-spin`}

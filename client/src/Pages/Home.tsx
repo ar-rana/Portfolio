@@ -1,7 +1,7 @@
 import styles from "./page.module.css";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
-import logo3 from "../assets/logo3.png";
+// import logo3 from "../assets/logo3.png";
 import Navigation from "../components/Navigation/Navigation";
 import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 import TypingText from "../components/TypingText/TypingText";
