@@ -27,7 +27,7 @@
   border-radius: 20px;
   padding: 1rem;
   width: 80%;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
   background-color: black;
 }
 .github_heading span {
@@ -47,7 +47,7 @@
 }
 .github_heading:hover {
   transform: translateZ(50px);
-  box-shadow: 0 0 20px 5px rgba(245, 244, 244, 0.35);
+  box-shadow: 0 0 18px 6px rgba(245, 244, 244, 0.35);
 }
 
 .contact_form {

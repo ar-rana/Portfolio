@@ -18,6 +18,13 @@
   align-items: center;
   justify-content: flex-start;
   color: white;
+  background-color: black;
+}
+.project_card:hover {
+  /* box-shadow:inset inset 0 0 12px 4px rgba(243, 241, 241, 0.5); */
+  box-shadow: 2px 2px white, 2px 2px white, 3px 3px white, 3px 3px white,
+      3px 3px white, 4px 4px white, 4px 4px white, 3.5px 3.5px white;
+    transform: translateX(-5px) translateY(-5px);
 }
 .inline_text {
   display: flex;
@@ -26,4 +33,13 @@
 }
 .img_container {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img_container img {
+  width: 100%;
+  border-radius: 10px;
 }

@@ -3,6 +3,7 @@ export interface ProjectPanel {
   techStk: string;
   github: string;
   img: string;
+  project_link?: string;
 }
 
 export interface BlogPanel {
