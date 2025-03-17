@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
   ];
   return (
     <div className={`${styles.blog_bg} blog`}>
-      <h1 className={styles.blog_heading}>Blogs</h1>
+      <h1 className={styles.blog_heading}>Tech Blogs</h1>
       <div className={styles.blog_container}>
         {blogs.map((blog) => (
           <BlogCard blog={blog} />

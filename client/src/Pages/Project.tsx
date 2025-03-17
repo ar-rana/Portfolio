@@ -7,7 +7,6 @@ import PrettyButton from "../components/PrettyButton/PrettyButton";
 import Navigation from "../components/Navigation/Navigation";
 import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 
-import logo3 from "../assets/logo3.png";
 import incEdu from "../assets/projects/inc_p.png";
 import todoImg from "../assets/projects/todo_img.png";
 import mhag from "../assets/projects/mhag.png";

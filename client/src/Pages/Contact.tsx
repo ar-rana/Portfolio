@@ -13,6 +13,7 @@ const Contact: React.FC = () => {
       <div className="section_container">
         <div className={styles.contact_form}>
           <form>
+            <h2 style={{ color: "white", marginBlock: 7}}>Connect with me</h2>
             <input type="text" placeholder="Subject" required />
             <input type="text" placeholder="Your email Id" required />
             <textarea rows={8} placeholder="Content" required />
