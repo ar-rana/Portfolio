@@ -27,14 +27,19 @@
 .btn::before {
   content: "";
   background: linear-gradient(
-    /**decide all transition colors**/ 45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #00ffd5,
-    #002bff,
-    #ff00c8,
-    #ff0000
+    /**decide all transition colors**/ 15deg,
+    /* #71C9CE,
+    #00ADB5,
+    #61C0BF,
+    #08D9D6,
+    #00ADB5,
+    #A8D8EA */
+    #EDCDBB,
+    #E3B7A0,
+    #7D5A50,
+    #BF9270,
+    #E5B299,
+    #FCDEC0
   );
   position: absolute;
   top: -3px;
@@ -45,7 +50,7 @@
   height: calc(100% + 4px);
   filter: blur(3px);
 
-  animation: glowing 16s linear infinite;
+  animation: glowing 17s linear infinite;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
   opacity: 0;

@@ -4,53 +4,129 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.home {
+.page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100%;
   flex-direction: column;
-}
-
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-}
-
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-}
-
-.blog {
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .section_container {
   width: 80%;
   height: 75%;
   overflow-y: auto;
+}
+
+.main_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  background-color: transparent;
+}
+.main_container img {
+  width: max-content;
+  border-radius: 5%;
+}
+.text_container {
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  margin-top: 4px;
+}
+
+.github_heading {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+  border: 4px solid white;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 80%;
+  transition: 0.3s ease-in-out;
+  background-color: black;
+}
+.github_heading span {
+  font-size: 3.5rem;
+}
+.github_heading p {
+  font-size: x-large;
+}
+.project_container {
+  width: 80%;
+  height: 60%;
+  overflow-y: auto;
+  padding: 1rem;
+}
+.project_container::-webkit-scrollbar {
+  display: none;
+}
+.github_heading:hover {
+  transform: translateZ(50px);
+  box-shadow: 0 0 18px 6px rgba(245, 244, 244, 0.35);
+}
+
+.contact_form {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+.contact_form input,
+.contact_form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1.5px solid gray;
+  box-sizing: border-box;
+}
+.loading {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.blog_heading {
+  color: white;
+  font-size: 3rem;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+.blog_container {
+  width: 90%;
+  height: 70%;
+  overflow-y: auto;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 950px) {
+  .blog_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .blog_container {
+    grid-template-columns: 1fr;
+  }
+}
+.blog_container::-webkit-scrollbar {
+  display: none;
+}
+.blog_bg {
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  /* background-image: url("/src/assets/blog_bg.svg"); */
+  z-index: 0;
 }

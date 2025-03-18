@@ -28,7 +28,9 @@ const Clock: React.FC = () => {
   };
 
   useEffect(() => {
-    setInterval(displayTime, 1000);
+    const interval = setInterval(displayTime, 1000);
+
+    return(() => clearInterval(interval));
   }, []);
   
   return (

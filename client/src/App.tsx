@@ -4,6 +4,7 @@ import About from "./Pages/About";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 import Blog from "./Pages/Blog";
+import ParticleEffect from "./components/ParticleEffect/ParticleEffect";
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/connect-with-me" element={<Contact />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs" element={<Blog />} />
       </Routes>
+      <ParticleEffect />
     </BrowserRouter>
   );
 }

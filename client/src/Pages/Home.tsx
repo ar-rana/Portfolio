@@ -1,33 +1,24 @@
-import styles from "./page.module.css";
-// import logo from "../assets/logo.png";
 import logo2 from "../assets/logo2.png";
 // import logo3 from "../assets/logo3.png";
 import Navigation from "../components/Navigation/Navigation";
-import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 import TypingText from "../components/TypingText/TypingText";
-import { useState } from "react";
 
 const Home = () => {
-  const [temp, setTemp] = useState(true);
   const intro = [
     "Aryan Rana",
     "a CS Engineering Student",
     "a Cloud & Fullstack Engineering Enthusiast",
   ];
   return (
-    <div className="home">
-      <button style={{ position: 'absolute', top: 0, right: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
-      <div className={styles.main_container}>
+    <div className="page">
+      <div className="main_container">
         <img src={logo2} />
-        <div className={styles.text_container}>
+        <div className="text_container">
           <span style={{backgroundColor: "black"}}>Hello, I'm </span>
           <TypingText text={intro} speed={200} />
         </div>
         <Navigation home={true} />
       </div>
-      {temp ? (
-        <ParticleEffect />
-      ): ''}
     </div>
   );
 };

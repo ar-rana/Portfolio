@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import styles from "./page.module.css";
+import React from "react";
 import logo2 from "../assets/logo2.png";
-import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 import { BlogPanel } from "../../types";
 import BlogCard from "../components/BlogCard/BlogCard";
+import Navigation from "../components/Navigation/Navigation";
 
 const Blog: React.FC = () => {
-  const [temp, setTemp] = useState(true);
-
   const blogs: BlogPanel[] = [
     {
       title: "some small title",
@@ -18,7 +15,7 @@ const Blog: React.FC = () => {
     {
       title: "some small - large - medium title",
       date: "Feb 22, 2025",
-      desc: "some small description some small description some small description some small description some small description some small description some small description some small description",
+      desc: "some small description some small some small description some small description some small description some small description some small description some small description some description some some small description some small description small description some small description some small description some small description some small description some small description",
       img: logo2,
     },
     {
@@ -41,18 +38,14 @@ const Blog: React.FC = () => {
     },
   ];
   return (
-    <div className={`${styles.blog_bg} blog`}>
-      <h1 className={styles.blog_heading}>Tech Blogs</h1>
-      <div className={styles.blog_container}>
-        {blogs.map((blog) => (
-          <BlogCard blog={blog} />
+    <div className="blog_bg page">
+      <h1 className="blog_heading">Tech Blogs</h1>
+      <div className="blog_container">
+        {blogs.map((blog, i) => (
+          <BlogCard key={i} blog={blog} />
         ))}
       </div>
-
-      <button style={{ position: 'absolute', top: 0, left: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
-      {temp ? (
-        <ParticleEffect />
-      ): ''}
+      <Navigation />
     </div>
   );
 };

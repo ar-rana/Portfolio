@@ -9,9 +9,9 @@ interface Props {
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
 
-  const viewImg = () => {
+  const openLink = (link: string) => {
     window.open(
-      project.img,
+      link,
       '_blank'
     );
   }
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
   return (
     <div className={styles.project_card}>
       <div className={styles.img_container}>
-        <img src={project.img} onClick={viewImg}/>
+        <img src={project.img} onClick={() => openLink(project.img)}/>
       </div>
       <div className={styles.project_info}>
         <h2>{project.title}</h2>
@@ -36,13 +36,12 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             ></span>
           </Link>
           {project.project_link ? (
-            <Link to="/">
               <span
                 title="Visit Website"
                 className="fa fa-eercast"
                 style={{ fontSize: "20px", color: "white", marginTop: "6px" }}
+                onClick={() => openLink(project.project_link!)}
               ></span>
-            </Link>
           ) : (
             ""
           )}

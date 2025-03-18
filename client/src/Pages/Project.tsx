@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import styles from "./page.module.css";
+import React from "react";
 // import { Link, useNavigate } from "react-router-dom";
 import { ProjectPanel } from "../../types";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import PrettyButton from "../components/PrettyButton/PrettyButton";
 import Navigation from "../components/Navigation/Navigation";
-import ParticleEffect from "../components/ParticleEffect/ParticleEffect";
 
 import incEdu from "../assets/projects/inc_p.png";
 import todoImg from "../assets/projects/todo_img.png";
@@ -20,8 +18,6 @@ import defaultImg from "../assets/projects/defaultImg.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 
 const Project:React.FC = () => {
-  const [temp, setTemp] = useState(false);
-
   const projects: ProjectPanel[] = [
     {
       title: "Collaborative Whiteboard",
@@ -98,27 +94,24 @@ const Project:React.FC = () => {
   ];
 
   const gotoGitHub = () => {
-    window.location.href = "https://github.com/ar-rana";
+    window.open(
+      "https://github.com/ar-rana",
+      "_blank"
+    );
   };
 
   return (
-    <div className="project">
-      <div className={styles.github_heading}>
+    <div className="page">
+      <div className="github_heading">
         <span className="fa fa-github"></span>
         <PrettyButton text="View all on GitHub" onClick={gotoGitHub}/>
       </div>
-      <div className={styles.project_container}>
-        {projects.map((project) => (
-          <ProjectCard project={project} />
+      <div className="project_container">
+        {projects.map((project, i) => (
+          <ProjectCard key={i} project={project} />
         ))}
       </div>
       <Navigation />
-
-      <button style={{ position: 'absolute', top: 0, left: 0}} onClick={() => setTemp(prev => !prev)}>click</button>
-      {temp ? (
-        <ParticleEffect />
-      ): ''}
-
     </div>
   );
 };
