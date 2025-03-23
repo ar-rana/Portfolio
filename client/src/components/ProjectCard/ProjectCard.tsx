@@ -39,7 +39,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
               <span
                 title="Visit Website"
                 className="fa fa-eercast"
-                style={{ fontSize: "20px", color: "white", marginTop: "6px" }}
+                style={{ fontSize: "20px", color: "white", marginTop: "6px", cursor: "pointer" }}
                 onClick={() => openLink(project.project_link!)}
               ></span>
           ) : (

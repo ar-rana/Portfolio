@@ -87,7 +87,7 @@ body {
   border: 1.5px solid gray;
   box-sizing: border-box;
 }
-.loading {
+.loading-form {
   color: white;
   font-weight: bold;
   font-size: 18px;

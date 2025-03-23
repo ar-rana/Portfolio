@@ -3,7 +3,7 @@ import style from "./emergeButton.module.css";
 
 interface Props {
     text: string;
-    onClick?: () => void;
+    onClick?: (e: any | undefined) => void;
 }
 const EmergeButton:React.FC<Props> = (props) => {
   return (

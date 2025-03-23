@@ -28,18 +28,18 @@
   content: "";
   background: linear-gradient(
     /**decide all transition colors**/ 15deg,
-    /* #71C9CE,
-    #00ADB5,
-    #61C0BF,
+    #71C9CE,
+    #0df9f5,
+    #A6E3E9,
     #08D9D6,
-    #00ADB5,
-    #A8D8EA */
-    #EDCDBB,
+    #A6E3E9,
+    #08D9D6
+    /* #EDCDBB,
     #E3B7A0,
     #7D5A50,
     #BF9270,
     #E5B299,
-    #FCDEC0
+    #FCDEC0 */
   );
   position: absolute;
   top: -3px;
