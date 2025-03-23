@@ -28,7 +28,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           <span>{project.techStk}</span>
         </div>
         <div style={{ display: "flex", gap: "0.5rem" }}>
-          <Link to="/">
+          <Link to={project.github} target="_blank">
             <span
               title="GitHub Page"
               className="fa fa-github"

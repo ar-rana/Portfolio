@@ -7,6 +7,18 @@ interface Blog {
   blog: BlogPanel;
 }
 const BlogCard: React.FC<Blog> = ({ blog }) => {
+
+  const openLink = (link: string | undefined | null) => {
+    if (!link) {
+      alert("Article has not been published yet");
+      return;
+    }
+    window.open(
+      link,
+      '_blank'
+    );
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -19,7 +31,7 @@ const BlogCard: React.FC<Blog> = ({ blog }) => {
         </div>
         <div className={styles.backView}>
           {blog.desc ? <h4>{blog.desc}</h4> : ""}
-          <PrettyButton text="View Article" onClick={() => alert("hello")} />
+          <PrettyButton text="View Article" onClick={() => openLink(blog.article_link)} />
         </div>
       </div>
     </div>

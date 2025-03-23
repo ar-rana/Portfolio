@@ -11,4 +11,5 @@ export interface BlogPanel {
   date: string;
   desc?: string;
   img: string;
+  article_link?: string;
 }
