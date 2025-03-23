@@ -17,7 +17,7 @@
   align-items: center;
 }
 
-.clock span{
+.clock span {
   position: absolute;
   transform: rotate(calc(15deg * var(--i)));
   inset: 3.5px;
@@ -30,6 +30,12 @@
   display: inline-block;
   font-size: 10px;
   color: white;
+}
+
+.clock span:nth-child(9) b,
+.clock span:nth-child(15) b,
+.clock span:nth-child(21) b {
+  transform: rotate(calc(-15deg * var(--i)));
 }
 
 .clock::before{
