@@ -130,3 +130,11 @@ body {
   /* background-image: url("/src/assets/blog_bg.svg"); */
   z-index: 0;
 }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 5rem;
+}

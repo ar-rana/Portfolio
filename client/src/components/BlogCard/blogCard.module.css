@@ -1,41 +1,3 @@
-/* .blog_card {
-  max-width: 20rem;
-  height: auto;
-  border: 2px solid white;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin: 8px 14px;
-  position: relative;
-  background-color: white;
-}
-.blog_card:hover {
-  box-shadow: 0 0 20px 0px rgba(243, 241, 241, 0.5);
-}
-.blog_card img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-.blog_info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  padding: 4px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 600;
-  padding: 8px;
-}
-.blog_info p {
-  margin: 0;
-}
-.blog_details {
-  color: gray;
-  padding: 6px;
-} */
-
 .container {
   width: 20rem;
   height: 20rem;
@@ -58,6 +20,7 @@
   height: 100%;
   width: 100%;
   border-radius: 2rem;
+  background-color: black;
   box-shadow: 0 0 5px 4px rgba(211, 205, 205, 0.25);
   position: absolute;
   backface-visibility: hidden;
@@ -76,12 +39,15 @@
   height: 65%;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
+  background-color: white;
+  margin-bottom: 4px;
 }
 .text {
   display: flex;
   flex-direction: column;
   margin-inline: 15px;
   align-items: center;
+  gap: 8px;
 }
 .backView {
   background-color: white;

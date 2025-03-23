@@ -1,45 +1,54 @@
 import React from "react";
-import logo2 from "../assets/logo2.png";
 import { BlogPanel } from "../../types";
+import RD from "../assets/blogs/rd.png";
+import article from "../assets/blogs/article.png";
 import BlogCard from "../components/BlogCard/BlogCard";
 import Navigation from "../components/Navigation/Navigation";
 
 const Blog: React.FC = () => {
   const blogs: BlogPanel[] = [
     {
-      title: "some small title",
-      date: "Feb 22, 2025",
-      desc: "some small description hello",
-      img: logo2,
+      title:
+        "A Novel Task Scheduling Algorithm in Heterogeneous Multi-cloud Environment",
+      date: "22 November, 2024",
+      desc: "The Proposed algorithm is observed to have a better makespan in 70% of cases and cloud utilization in 65% of cases.",
+      img: RD,
     },
     {
-      title: "some small - large - medium title",
-      date: "Feb 22, 2025",
-      desc: "some small description some small some small description some small description some small description some small description some small description some small description some description some some small description some small description small description some small description some small description some small description some small description some small description",
-      img: logo2,
+      title:
+        "A survey on cloud computing security: Challenges, issues and solutions",
+      date: "To-Be Published",
+      desc: "Discussed Cloud Architecture and analyzed Cloud Security Concerns, proposed 4-5 potential solutions to improve Data Integrity",
+      img: RD,
     },
     {
-      title: "some small - large title",
-      date: "Feb 22, 2025",
-      desc: "some small description some small description some small description some small description",
-      img: logo2,
+      title: "A Brief Overview of Docker",
+      date: "19 March, 2025",
+      desc: "A article on why we used docker?, what problme does docker solve and how we solved this problem before docker's existance. It also briefly discusses the docker architecture and it components.",
+      img: article,
     },
     {
-      title: "How does the kafka architerc=tuer wjncewoi ocewf wibkvem bkewb",
-      date: "Feb 22, 2025",
-      desc: "",
-      img: logo2,
+      title: "8 Common Architectural Patterns",
+      date: "20 March, 2025",
+      desc: "Discusses about the following software architectural patterns; Monolithic Architecture, Microservices Architecture, Event-Driven Architecture, Microkernel Architecture, Layered Architecture, Client-Server Architecture, Peer-to-Peer Architecture and Hybrid Architecture.",
+      img: article,
     },
     {
-      title: "some small",
-      date: "Feb 22, 2025",
-      desc: "some some small description",
-      img: logo2,
+      title: "How does Kafka architecture work?",
+      date: "21 March, 2025",
+      desc: "Discusses what is event streaming? and how different Kafka objects communicate with each other to form a hybrid system that can act as a publisher-subscriber and a Queue model. Also goes through the APIs involved in achieving this type of architecture.",
+      img: article,
+    },
+    {
+      title: "A detailed overview of Microservices",
+      date: "22 March, 2025",
+      desc: "Talks about microservices architecture, its diffrent components and design pattern. Also goes through the difference between a microservice and monolithis architecture. Along with the advantages and disabvantage of following this pattern.",
+      img: article,
     },
   ];
   return (
     <div className="blog_bg page">
-      <h1 className="blog_heading">Tech Blogs</h1>
+      <h1 className="blog_heading">Tech Blogs & Research</h1>
       <div className="blog_container">
         {blogs.map((blog, i) => (
           <BlogCard key={i} blog={blog} />
