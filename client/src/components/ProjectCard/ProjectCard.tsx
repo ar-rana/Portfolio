@@ -27,19 +27,19 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
           <b>Technologies used: </b>
           <span>{project.techStk}</span>
         </div>
-        <div style={{ display: "flex", gap: "0.5rem" }}>
+        <div style={{ display: "flex", gap: "0.6rem", marginTop: "6px" }}>
           <Link to={project.github} target="_blank">
             <span
               title="GitHub Page"
               className="fa fa-github"
-              style={{ fontSize: "20px", color: "white", marginTop: "6px" }}
+              style={{ fontSize: "23px", color: "white" }}
             ></span>
           </Link>
           {project.project_link ? (
               <span
                 title="Visit Website"
                 className="fa fa-eercast"
-                style={{ fontSize: "20px", color: "white", marginTop: "6px", cursor: "pointer" }}
+                style={{ fontSize: "22px", color: "white", cursor: "pointer" }}
                 onClick={() => openLink(project.project_link!)}
               ></span>
           ) : (
