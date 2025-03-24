@@ -11,24 +11,52 @@ const Contact: React.FC = () => {
 
   const handleFormSubmit = async (e: React.MouseEvent) => {
     e.preventDefault();
-    // if (loading) return;
-    if (!subject.trim() || !email.trim() || !content.trim()) {
-      alert("Please fill all fields");
-      return;
-    }
-    if (!validate(email)) {
-      alert("Please enter a valid email");
-      return;
-    }
+    if (!validateForm()) return;
+    setLoading(true);
+    try {
+      const res = await fetch("http://localhost:5000/send_email", {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify({
+          email: email,
+          subject: subject,
+          content: content,
+        })
+      });
 
-    setLoading(prev => !prev);
-    console.log("reached function")
+      if (res.ok) {
+        const response = await res.text();
+        alert(response);
+      } else {
+        const response = await res.text();
+        alert(response);
+      }
+    } catch (e) {
+      console.log("Some error occured: ", e);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const validate = (email: string) => {
+  const validateForm = () => {
+    if (loading) return false;
+    if (!subject.trim() || !email.trim() || !content.trim()) {
+      alert("Please fill all fields");
+      return false;
+    }
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email");
+      return false;
+    }
+    return true;
+  }
+
+  const validateEmail = (email: string) => {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return pattern.test(email);
-  }
+  };
 
   return (
     <div className="page">
