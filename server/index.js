@@ -44,20 +44,32 @@ server.listen(PORT, () => {
     console.log(`server live on port ${PORT}`);
 });
 
-function verify() {
-    console.log("verification done.");
-    return true;
+async function verify(token) {
+    console.log("key: ", process.env.RECAPTCHA_SECRET);
+    try {
+        const res = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET}&response=${token}`, {
+            method: "POST",
+        });
+        const response = await res.json();
+        console.log("reCaptcha: ", response);
+
+        return response.success;
+    } catch (e) {
+        console.log(e.message);
+        return false;
+    }
 }
 
-function handleRequest(req, res, data) {
+async function handleRequest(req, res, data) {
     switch (req.url) {
         case '/send_email':
-            if (verify()) {
+            const verified = await verify(data.token);
+            if (verified) {
                 res.statusCode = 200;
-                res.write(`email sent to the me 🎉🎉 from: ${data.email}`);
+                res.write(`email sent to the Aryan Rana 🎉🎉 from: ${data.email}`);
             } else {
                 res.statusCode = 401;
-                res.write("it seems you are not a human...🤨");
+                res.write("either you are not a human...🤨, or just redo the CAPTCHA");
             }
             break;
         case '/verify':

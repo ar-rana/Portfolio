@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import EmergeButton from "../components/EmergeButton/EmergeButton";
+import React, { useRef, useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
+  const tokenRef = useRef<string>("");
+  const recaptchaRef = useRef<any>(null);
 
   const [subject, setSubject] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -16,14 +18,15 @@ const Contact: React.FC = () => {
     try {
       const res = await fetch("http://localhost:5000/send_email", {
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
         method: "POST",
         body: JSON.stringify({
           email: email,
           subject: subject,
           content: content,
-        })
+          token: tokenRef.current,
+        }),
       });
 
       if (res.ok) {
@@ -37,12 +40,22 @@ const Contact: React.FC = () => {
       console.log("Some error occured: ", e);
     } finally {
       setLoading(false);
+      recaptchaRef.current.reset();
     }
+  };
+
+  const captchaAction = (token: string | null) => {
+    if (token) tokenRef.current = token;
   };
 
   const validateForm = () => {
     if (loading) return false;
-    if (!subject.trim() || !email.trim() || !content.trim()) {
+    if (
+      !tokenRef.current ||
+      !subject.trim() ||
+      !email.trim() ||
+      !content.trim()
+    ) {
       alert("Please fill all fields");
       return false;
     }
@@ -51,7 +64,7 @@ const Contact: React.FC = () => {
       return false;
     }
     return true;
-  }
+  };
 
   const validateEmail = (email: string) => {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -63,7 +76,7 @@ const Contact: React.FC = () => {
       <div className="section_container">
         <div className="contact_form">
           <form>
-            <h2 style={{ color: "white", marginBlock: 7 }}>Connect with me</h2>
+            <h2 style={{ color: "white", marginBlock: 7 }}>Connect with me.</h2>
             <input
               type="text"
               placeholder="Subject"
@@ -85,7 +98,17 @@ const Contact: React.FC = () => {
               onChange={(e: any) => setContent(e.target.value)}
               required
             />
-            <EmergeButton text="Submit" onClick={(e: React.MouseEvent) => handleFormSubmit(e)} />
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITEKEY}
+              ref={recaptchaRef}
+              onChange={(value) => captchaAction(value)}
+            />
+            <br />
+            <input
+              type="submit"
+              value="submit"
+              onClick={(e: React.MouseEvent) => handleFormSubmit(e)}
+            />
             {loading ? (
               <span className="loading-form fa fa-circle-o-notch fa-spin"></span>
             ) : (
