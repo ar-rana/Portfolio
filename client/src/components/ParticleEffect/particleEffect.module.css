@@ -20,7 +20,7 @@
   margin: 0px 17px;
   /* text-shadow: 0 0 1px white, 0 0 2px gray; */
   animation: animate linear infinite;
-  animation-duration: calc(200s / var(--i));
+  animation-duration: calc(220s / var(--i));
 }
 .bubble span:nth-child(even) {
   text-shadow: 0 0 2px white, 0 0 3px gray;

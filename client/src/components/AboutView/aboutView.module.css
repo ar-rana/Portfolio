@@ -16,6 +16,7 @@
 }
 .inline_text {
   display: flex;
+  cursor: pointer;
   align-items: center;
   gap: 4px;
   width: max-content;
@@ -29,7 +30,8 @@
 }
 .drop_down ul {
   display: none;
-  z-index: 1;
+  width: max-content;
+  z-index: 15;
   position: absolute;
   cursor: pointer;
   top: 100%;
@@ -39,6 +41,8 @@
   padding: 2px;
   background-color: whitesmoke;
   border-radius: 10px;
+  max-height: 112px;
+  overflow-x: auto;
 }
 .drop_down ul li {
   margin-top: 2px;

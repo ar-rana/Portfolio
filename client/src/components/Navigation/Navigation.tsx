@@ -24,7 +24,7 @@ const Navigation: React.FC<Props> = ({ home = false}) => {
       </li>
       <li>
         <Link to="/projects">
-          <EmergeButton text="GitHub" />
+          <EmergeButton text="Projects" />
         </Link>
       </li>
       <li>

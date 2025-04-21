@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
 import ReCAPTCHA from "react-google-recaptcha";
+import PrettyButton from "../components/PrettyButton/PrettyButton";
 
 const Contact: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -107,13 +108,7 @@ const Contact: React.FC = () => {
             {loading ? (
               <span className="loading_form fa fa-circle-o-notch fa-spin"></span>
             ) : (
-              <input
-                type="submit"
-                value={loading ? "Please wait..." : "Submit"}
-                className="form_button"
-                style={{ fontWeight: "bold" }}
-                onClick={(e: React.MouseEvent) => handleFormSubmit(e)}
-              />
+              <PrettyButton text="&emsp;&emsp;Send&emsp;&emsp;" onClick={() => handleFormSubmit}/>
             )}
           </form>
         </div>
