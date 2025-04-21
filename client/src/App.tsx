@@ -13,7 +13,7 @@ import { ResponseMessage } from "./MessageContext.tsx";
 function App() {
 
   return (
-    <BrowserRouter basename="/Portfolio">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
     <ResponseMessage>
       <Suspense fallback={<Loading />}>
         <Routes>
