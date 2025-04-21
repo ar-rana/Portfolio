@@ -13,7 +13,7 @@ import { ResponseMessage } from "./MessageContext.tsx";
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Portfolio">
     <ResponseMessage>
       <Suspense fallback={<Loading />}>
         <Routes>
