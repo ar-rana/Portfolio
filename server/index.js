@@ -1,9 +1,9 @@
 const http = require('http');
 const mailer = require('nodemailer');
+require('dotenv').config();
 
 const PORT = 5000;
-const RECAPTCHA_SECRET = process.env.NODE_RECAPTCHA_SECRET;
-console.log(RECAPTCHA_SECRET);
+const RECAPTCHA_SECRET = process.env.RECAPTCHA_SECRET;
 
  let transporter = mailer.createTransport({
     host: "smtp.gmail.com",
@@ -58,7 +58,7 @@ const server = http.createServer((req, res) => {
 });
 
 async function verify(token) {
-    console.log("key: ", RECAPTCHA_SECRET);
+    // console.log("key: ", RECAPTCHA_SECRET);
     try {
         const res = await fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET}&response=${token}`, {
             method: "POST",
@@ -105,7 +105,7 @@ async function handleRequest(req, res, data) {
                 res.statusCode = 200;
             } else {
                 res.statusCode = 401;
-                res.write("either you are not a human...🤨, or just redo the CAPTCHA");
+                res.write("either you are not a human.....🤨, or just redo the CAPTCHA");
             }
             break;
         case '/verify':
