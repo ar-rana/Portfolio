@@ -1,7 +1,23 @@
 const http = require('http');
-// const mailer = require('nodemailer');
+const mailer = require('nodemailer');
+
 const PORT = 5000;
 const RECAPTCHA_SECRET = process.env.NODE_RECAPTCHA_SECRET;
+console.log(RECAPTCHA_SECRET);
+
+ let transporter = mailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true, // use TLS
+    auth: {
+      user: process.env.TRANSPORTER_USER,
+      pass: process.env.TRANSPORTER_PASS,
+    },
+    tls: {
+      // do not fail on invalid certs
+      rejectUnauthorized: false,
+    },
+});
 
 const server = http.createServer((req, res) => {
     if (req.method === 'OPTIONS') {
@@ -41,10 +57,6 @@ const server = http.createServer((req, res) => {
 
 });
 
-server.listen(PORT, () => {
-    console.log(`server live on port ${PORT}`);
-});
-
 async function verify(token) {
     console.log("key: ", RECAPTCHA_SECRET);
     try {
@@ -61,13 +73,36 @@ async function verify(token) {
     }
 }
 
+async function sendMail(from, content, subject) {
+    var message = {
+        from: from,
+        to: process.env.SEND_TO,
+        subject: `Via Portfolio, Subject: ${subject}` ,
+        text: content
+    };
+
+    transporter.sendMail(message, (err) => {
+        if (err) {
+            console.log(err);
+            return false;
+        }
+    })
+    return true;
+}
+
 async function handleRequest(req, res, data) {
     switch (req.url) {
         case '/send_email':
             const verified = await verify(data.token);
             if (verified) {
+                const sent = await sendMail(data.email, data.content, data.subject);
+                if (sent) {
+                    res.write(`email successfully sent to the Aryan Rana 🎉🎉 from: ${data.email}`);
+                } else {
+                    res.write(`Sorry for the inconvinience, some error occured, 
+                        you may try again or reach out via LinkedIn @linkedin.com/in/-aryan-rana`);
+                }
                 res.statusCode = 200;
-                res.write(`email sent to the Aryan Rana 🎉🎉 from: ${data.email}`);
             } else {
                 res.statusCode = 401;
                 res.write("either you are not a human...🤨, or just redo the CAPTCHA");
@@ -83,3 +118,15 @@ async function handleRequest(req, res, data) {
     }
     res.end();
 }
+
+server.listen(PORT, () => {
+    console.log(`server live on port ${PORT} at: ${(new Date()).getTime()}`);
+});
+
+transporter.verify(function (error, success) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log(`SMTP server Active at: ${(new Date()).getTime()}`);
+    }
+});
