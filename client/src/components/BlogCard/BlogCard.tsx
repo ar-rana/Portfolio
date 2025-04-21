@@ -2,15 +2,17 @@ import React from "react";
 import styles from "./blogCard.module.css";
 import { BlogPanel } from "../../../types";
 import PrettyButton from "../PrettyButton/PrettyButton";
+import { useMessage } from "../../MessageContext";
 
 interface Blog {
   blog: BlogPanel;
 }
 const BlogCard: React.FC<Blog> = ({ blog }) => {
+  const { setMessage } = useMessage();
 
   const openLink = (link: string | undefined | null) => {
     if (!link) {
-      alert("Article has not been published yet");
+      setMessage("This article has not been published yet");
       return;
     }
     window.open(

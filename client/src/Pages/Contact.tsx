@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
 import ReCAPTCHA from "react-google-recaptcha";
-import PrettyButton from "../components/PrettyButton/PrettyButton";
+import { useMessage } from "../MessageContext";
 
 const Contact: React.FC = () => {
+  const { setMessage } = useMessage();
   const [loading, setLoading] = useState<boolean>(false);
   const tokenRef = useRef<string>("");
   const recaptchaRef = useRef<any>(null);
@@ -32,10 +33,10 @@ const Contact: React.FC = () => {
 
       if (res.ok) {
         const response = await res.text();
-        alert(response);
+        setMessage(response);
       } else {
         const response = await res.text();
-        alert(response);
+        setMessage(response);
       }
     } catch (e) {
       console.log("Some error occured: ", e);
@@ -57,11 +58,11 @@ const Contact: React.FC = () => {
       !email.trim() ||
       !content.trim()
     ) {
-      alert("Please fill all fields");
+      setMessage("Please fill all fields");
       return false;
     }
     if (!validateEmail(email)) {
-      alert("Please enter a valid email");
+      setMessage("Please enter a valid email");
       return false;
     }
     return true;
@@ -108,7 +109,7 @@ const Contact: React.FC = () => {
             {loading ? (
               <span className="loading_form fa fa-circle-o-notch fa-spin"></span>
             ) : (
-              <PrettyButton text="&emsp;&emsp;Send&emsp;&emsp;" onClick={() => handleFormSubmit}/>
+              <button className="form_btn" type="submit" onClick={handleFormSubmit}>Send</button>
             )}
           </form>
         </div>
