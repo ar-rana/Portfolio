@@ -21,6 +21,7 @@ const Contact: React.FC = () => {
       const res = await fetch(`${import.meta.env.VITE_BASEURL}send_email`, {
         headers: {
           "Content-Type": "application/json",
+          "x-functions-key": `${import.meta.env.VITE_FUNCTION_KEY}`
         },
         method: "POST",
         body: JSON.stringify({
@@ -30,7 +31,7 @@ const Contact: React.FC = () => {
           token: tokenRef.current,
         }),
       });
-
+      
       if (res.ok) {
         const response = await res.text();
         setMessage(response);
