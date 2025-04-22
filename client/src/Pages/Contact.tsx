@@ -18,7 +18,7 @@ const Contact: React.FC = () => {
     if (!validateForm()) return;
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/send_email", {
+      const res = await fetch(`${import.meta.env.VITE_BASEURL}send_email`, {
         headers: {
           "Content-Type": "application/json",
         },
