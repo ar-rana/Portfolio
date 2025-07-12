@@ -8,9 +8,9 @@ const About: React.FC = () => {
   return (
     <div className="page">
       <Clock />
-      <div className="section_container">
+      {/* <div className="section_container" style={{overflowY: 'visible'}}> */}
         <AboutView />
-      </div>
+      {/* </div> */}
       <Navigation />   
     </div>
   );

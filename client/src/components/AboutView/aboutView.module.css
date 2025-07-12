@@ -3,10 +3,12 @@
   margin-top: 2rem;
 }
 .about_view {
-  padding: 1rem;
+  padding: 1.5rem;
+  padding-left: 0;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 67%;
   color: white;
   background-color: black;
 }
@@ -47,7 +49,7 @@
   padding: 2px;
   background-color: whitesmoke;
   border-radius: 10px;
-  max-height: 115px;
+  max-height: 112px;
   overflow-x: auto;
   direction: rtl; /* move scrollbar to left side */
 }
