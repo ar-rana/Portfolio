@@ -6,45 +6,56 @@ const AboutView = () => {
       <span className={styles.about_text}>
         Aryan Rana, Originally from Himachal Pradesh and raised in Delhi, I
         possess a strong drive for continuous personal growth and knowledge
-        acquisition.
+        acquisition. I am a Computer Science & Systems Engineering student who enjoys
+        building scalable application and exploring cloud technologies. Apart
+        from tech, I am also very keen about geopolitics and world afairs.
       </span>
       <br />
       <span className={styles.about_text}>
-        I am a Computer Science & Systems Engineering student who enjoys
-        building scalable application and exploring cloud technologies. Apart
-        from tech, my interests involve outdoor activities like running and
-        football. I am also very keen about geopolitics and world afairs.
+        I was interrest in the field of Computer Science since my middle school the idea
+        of being able to create anything from scratch as you like always facinated me. 
+        I started my proper coding journey in 2022, with a fully functional website, since 
+        then I have made several projects with upto 10,000 lines of code. Currently I am 
+        enjoying my time learning Cloud technologies.
       </span>
       <br />
+      <div className={styles.info_icons}>
       <div className={styles.inline_text}>
-        <span className="fa fa-map-marker" style={{ fontSize: "21px" }}></span>
+        <span className="fa fa-map-marker" style={{ fontSize: "22px" }}></span>
         <span className={styles.about_text}>India</span>
       </div>
-        <div className={`${styles.inline_text} ${styles.drop_down}`}>
-          <span
-            className="fa fa-free-code-camp"
-            style={{ fontSize: "17px" }}
-          ></span>
-          <span className={styles.about_text}>DSA</span>
-          <ul>
-            <li><a href="https://leetcode.com/u/ar_Rana/" target="_blank">LeetCode</a></li>
-            <li><a href="https://www.geeksforgeeks.org/user/ar_rana/" target="_blank">Geeks for Geeks</a></li>
-          </ul>
-        </div>
-        <div className={`${styles.inline_text} ${styles.drop_down}`}>
-          <span
-            className="fa fa-certificate"
-            style={{ fontSize: "17px" }}
-          ></span>
-          <span className={styles.about_text}>Certificates</span>
-          <ul>
-            <li><a href="https://learn.microsoft.com/en-us/users/aryanrana-1742/" target="_blank">Microsoft Learn</a></li>
-            <li><a href="https://badgr.com/public/assertions/mCm_THmYQW-suouNNkcYCg?identity__email=aryanrana.connect@gmail.com" target="_blank">Postman API Fundamentals</a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-905c6608-0692-4f2e-9db8-b198497aae4a/" target="_blank">Java Spring & Spring Boot</a></li>
-            <li><a href="https://www.udemy.com/certificate/UC-d3e9c9ba-109a-4fcf-aad3-28fc0a2b6e60/" target="_blank">Node, Expresss & MongoDB</a></li>
+      <div className={`${styles.inline_text} ${styles.drop_down}`}>
+        <span
+          className="fa fa-free-code-camp"
+          style={{ fontSize: "17px" }}
+        ></span>
+        <span className={styles.about_text}>DSA</span>
+        <ul>
+          <li><a href="https://leetcode.com/u/ar_Rana/" target="_blank">LeetCode</a></li>
+          <li><a href="https://www.geeksforgeeks.org/user/ar_rana/" target="_blank">Geeks for Geeks</a></li>
         </ul>
       </div>
+      
+      <div className={`${styles.inline_text} ${styles.drop_down}`}>
+        <span
+          className="fa fa-certificate"
+          style={{ fontSize: "19px" }}
+        ></span>
+        <span className={styles.about_text}>Certificates</span>
+        <ul>
+          <li><a href="https://learn.microsoft.com/en-us/users/aryanrana-1742/" target="_blank">Microsoft Learn</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/users/aryanrana-1742/credentials/certification/azure-fundamentals?tab=tab-modules" target="_blank">Microsoft: Azure Fundamentals</a></li>
+          <li><a href="https://badgr.com/public/assertions/mCm_THmYQW-suouNNkcYCg?identity__email=aryanrana.connect@gmail.com" target="_blank">Postman API Fundamentals</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-905c6608-0692-4f2e-9db8-b198497aae4a/" target="_blank">Java Spring & Spring Boot</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-d3e9c9ba-109a-4fcf-aad3-28fc0a2b6e60/" target="_blank">Node, Expresss & MongoDB</a></li>
+      </ul>
     </div>
+    <div className={styles.inline_text}>
+        <span className="fa fa-graduation-cap" style={{ fontSize: "16px" }}></span>
+        <span className={styles.about_text}>CGPA: 9.06/10 </span>
+    </div>
+    </div>
+  </div>
   );
 };
 

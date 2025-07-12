@@ -44,6 +44,7 @@ const Contact: React.FC = () => {
     } finally {
       setLoading(false);
       recaptchaRef.current.reset();
+      tokenRef.current = "";
     }
   };
 

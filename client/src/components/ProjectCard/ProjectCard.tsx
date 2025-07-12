@@ -32,14 +32,14 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
             <span
               title="GitHub Page"
               className="fa fa-github"
-              style={{ fontSize: "23px", color: "white" }}
+              style={{ fontSize: "26px", color: "white" }}
             ></span>
           </Link>
           {project.project_link ? (
               <span
                 title="Visit Website"
                 className="fa fa-eercast"
-                style={{ fontSize: "22px", color: "white", cursor: "pointer" }}
+                style={{ fontSize: "26px", color: "white", cursor: "pointer" }}
                 onClick={() => openLink(project.project_link!)}
               ></span>
           ) : (

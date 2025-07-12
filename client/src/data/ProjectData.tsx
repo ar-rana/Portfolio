@@ -1,6 +1,6 @@
 import { ProjectPanel } from "../../types";
 import incEdu from "../assets/projects/inc_p.png";
-import mhag from "../assets/projects/mhag.png";
+// import mhag from "../assets/projects/mhag.png";
 import sportsManage from "../assets/projects/sportsM.png";
 import algoVis from "../assets/projects/algovis.png";
 import tweet from "../assets/projects/tweet.png";
@@ -40,18 +40,18 @@ export const projects: ProjectPanel[] = [
       "https://path-visualizer-git-main-aryan-ranas-projects.vercel.app/",
   },
   {
-    title: "Twitter Clone",
-    techStk: "NextJs, Firebase Storage & Firestore, TailwindCSS",
-    github: "https://github.com/ar-rana/Sports-Management-Portal",
-    img: tweet,
-    project_link: "https://twitter-rho-one.vercel.app/",
-  },
-  {
     title: "ChatApp-2.0 (Scalable Chat Application)",
     techStk:
       "Next.js v14, TailwindCSS, Socket.io, Node, ExpressJS, Redis, Kafka, Prisma",
     github: "https://github.com/ar-rana/Sports-Management-Portal",
     img: chatApp,
+  },
+  {
+    title: "Twitter Clone",
+    techStk: "NextJs, Firebase Storage & Firestore, TailwindCSS",
+    github: "https://github.com/ar-rana/Sports-Management-Portal",
+    img: tweet,
+    project_link: "https://twitter-rho-one.vercel.app/",
   },
   {
     title: "Sports Management Portal",
@@ -66,13 +66,13 @@ export const projects: ProjectPanel[] = [
     github: "https://github.com/ar-rana/Employee-Management-System",
     img: defaultImg,
   },
-  {
-    title: "Monster Hunter - Arcade Game",
-    techStk: "HTML, CSS, JS",
-    github: "https://github.com/ar-rana/inclusive-education-FrontendWebsite",
-    img: mhag,
-    project_link: "https://monster-hunter-aryan-ranas-projects.vercel.app/",
-  },
+  // {
+  //   title: "Monster Hunter - Arcade Game",
+  //   techStk: "HTML, CSS, JS",
+  //   github: "https://github.com/ar-rana/inclusive-education-FrontendWebsite",
+  //   img: mhag,
+  //   project_link: "https://monster-hunter-aryan-ranas-projects.vercel.app/",
+  // },
   {
     title: "Inclusive Education Website",
     techStk: "HTML, CSS",

@@ -14,11 +14,17 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* background-color: black; */
 }
+.info_icons {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: transparent;
+}
 .inline_text {
   display: flex;
   cursor: pointer;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   width: max-content;
 }
 .drop_down {
@@ -41,8 +47,9 @@
   padding: 2px;
   background-color: whitesmoke;
   border-radius: 10px;
-  max-height: 112px;
+  max-height: 115px;
   overflow-x: auto;
+  direction: rtl; /* move scrollbar to left side */
 }
 .drop_down ul li {
   margin-top: 2px;

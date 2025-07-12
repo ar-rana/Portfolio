@@ -46,4 +46,18 @@ export const blogs: BlogPanel[] = [
     img: article,
     article_link: "https://medium.com/@ar_rana/a-detailed-overview-of-microservices-d5f4a4f50220",
   },
+  {
+    title: "What are Compilers and Interpreters?",
+    date: "20 June, 2025",
+    desc: "We discuss in detail about what are compilers and the process of your source code being converted to executals in a compiled language. We also discuss about what are interpreters, what is JIT compilation and how is it fater the plain interpreted languages.",
+    img: article,
+    article_link: "https://medium.com/@ar_rana/what-are-compilers-interpreters-650b7d2826ae",
+  },
+  {
+    title: "The OSI and TCP/IP Reference Models",
+    date: "11 July, 2025",
+    desc: "In this article we discuss about the all the seven layers in the OSI Reference Model and in the TCP/IP Reference Model. We also go through a brief difference between these model and their significance.",
+    img: article,
+    article_link: "https://medium.com/@ar_rana/the-osi-and-tcp-ip-reference-models-c989bbde1d2a",
+  },
 ];
