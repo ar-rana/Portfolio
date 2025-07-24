@@ -14,14 +14,14 @@ const AboutView = () => {
       <span className={styles.about_text}>
         I was interrest in the field of Computer Science since my middle school the idea
         of being able to create anything from scratch as you like always facinated me. 
-        I started my proper coding journey in 2022, with a fully functional website, since 
-        then I have made several projects with upto 10,000 lines of code. Currently I am 
-        enjoying my time learning Cloud technologies.
+        I started my proper coding journey in 2022, with a fully functional website. Since 
+        then, I have made several projects, including one with more than 10,000 lines of code in my second year. 
+        And currently I am enjoying my time learning Cloud technologies.
       </span>
       <br />
       <div className={styles.info_icons}>
       <div className={styles.inline_text}>
-        <span className="fa fa-map-marker" style={{ fontSize: "22px" }}></span>
+        <span className="fa fa-map-marker" style={{ fontSize: "21px" }}></span>
         <span className={styles.about_text}>India</span>
       </div>
       <div className={`${styles.inline_text} ${styles.drop_down}`}>
@@ -51,7 +51,7 @@ const AboutView = () => {
       </ul>
     </div>
     <div className={styles.inline_text}>
-        <span className="fa fa-graduation-cap" style={{ fontSize: "16px" }}></span>
+        <span className="fa fa-graduation-cap" style={{ fontSize: "17px" }}></span>
         <span className={styles.about_text}>CGPA: 9.06/10 </span>
     </div>
     </div>
