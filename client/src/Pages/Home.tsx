@@ -7,7 +7,7 @@ const Home = () => {
   const intro = [
     "Aryan Rana",
     "a CS Engineering Student",
-    "a Cloud & Fullstack Engineering Enthusiast", // iska kya karna hai
+    "a Fullstack Engineer",
   ];
   return (
     <div className="page">
