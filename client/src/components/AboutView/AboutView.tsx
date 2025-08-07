@@ -44,10 +44,11 @@ const AboutView = () => {
         <span className={styles.about_text}>Certificates</span>
         <ul>
           <li><a href="https://learn.microsoft.com/en-us/users/aryanrana-1742/" target="_blank">Microsoft Learn</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/users/aryanrana-1742/credentials/certification/azure-fundamentals?tab=tab-modules" target="_blank">Microsoft: Azure Fundamentals</a></li>
+          <li><a href="https://learn.microsoft.com/api/credentials/share/en-us/AryanRana-1742/D88B13AF59C47E26?sharingId=809AB72947F9520D" target="_blank">Microsoft Certified: Azure Fundamentals</a></li>
+          <li><a href="https://www.credly.com/badges/ea6f677f-7e62-4717-bd58-1b90322c0652/public_url" target="_blank">IBM: Cloud Computing Fundamentals</a></li>
           <li><a href="https://badgr.com/public/assertions/mCm_THmYQW-suouNNkcYCg?identity__email=aryanrana.connect@gmail.com" target="_blank">Postman API Fundamentals</a></li>
-          <li><a href="https://www.udemy.com/certificate/UC-905c6608-0692-4f2e-9db8-b198497aae4a/" target="_blank">Java Spring & Spring Boot</a></li>
-          <li><a href="https://www.udemy.com/certificate/UC-d3e9c9ba-109a-4fcf-aad3-28fc0a2b6e60/" target="_blank">Node, Expresss & MongoDB</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-905c6608-0692-4f2e-9db8-b198497aae4a/" target="_blank">Java Spring Framework & Spring Boot</a></li>
+          <li><a href="https://www.udemy.com/certificate/UC-d3e9c9ba-109a-4fcf-aad3-28fc0a2b6e60/" target="_blank">NodeJS & Expresss with Socket.io</a></li>
       </ul>
     </div>
     <div className={styles.inline_text}>
