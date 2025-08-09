@@ -14,9 +14,10 @@ export const blogs: BlogPanel[] = [
   {
     title:
       "A survey on cloud computing security: Challenges, issues and solutions",
-    date: "To-Be Published",
-    desc: "Discussed Cloud Architecture and analyzed Cloud Security Concerns, proposed 4-5 potential solutions to improve Data Integrity",
+    date: "9 August, 2025",
+    desc: "Discussed Cloud Architecture, service, types of cloud and analyzed Cloud Security Concerns, proposed 4-5 potential solutions to improve Data Integrity",
     img: RD,
+    article_link: "https://link.springer.com/chapter/10.1007/978-3-031-91798-1_17"
   },
   // articles start
   {
