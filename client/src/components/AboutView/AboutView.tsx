@@ -14,7 +14,7 @@ const AboutView = () => {
       <span className={styles.about_text}>
         I was interrest in the field of Computer Science since my middle school the idea
         of being able to create anything from scratch as you like always facinated me. 
-        I started my proper coding journey in 2022, with a fully functional website. Since 
+        I started my proper coding journey in 2022, with a basic HTML&CSS website. Since 
         then, I have made several projects, including one with more than 10,000 lines of code in my second year. 
         And currently I am enjoying my time learning Cloud technologies.
       </span>

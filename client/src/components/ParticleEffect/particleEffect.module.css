@@ -19,17 +19,27 @@
   color: whitesmoke;
   margin: 0px 17px;
   /* text-shadow: 0 0 1px white, 0 0 2px gray; */
-  animation: animate linear infinite;
+  animation: fadeIn 1.5s forwards, animate linear infinite;
   animation-duration: calc(220s / var(--i));
 }
 .bubble span:nth-child(even) {
   text-shadow: 0 0 2px white, 0 0 3px gray;
 }
+
 @keyframes animate {
   0% {
     transform: translateY(100vh) scale(0.4) rotate(0deg);
   }
   100% {
     transform: translateY(-5vh) scale(0.6) rotate(720deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
