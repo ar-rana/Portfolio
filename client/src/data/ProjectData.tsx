@@ -43,13 +43,13 @@ export const projects: ProjectPanel[] = [
     title: "ChatApp-2.0 (Scalable Chat Application)",
     techStk:
       "Next.js v14, TailwindCSS, Socket.io, Node, ExpressJS, Redis, Kafka, Prisma",
-    github: "https://github.com/ar-rana/Sports-Management-Portal",
+    github: "https://github.com/ar-rana/ChatApp-2.0",
     img: chatApp,
   },
   {
     title: "Twitter Clone",
     techStk: "NextJs, Firebase Storage & Firestore, TailwindCSS",
-    github: "https://github.com/ar-rana/Sports-Management-Portal",
+    github: "https://github.com/ar-rana/twitter_clone",
     img: tweet,
     project_link: "https://twitter-rho-one.vercel.app/",
   },
