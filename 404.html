@@ -6,7 +6,9 @@
     <title>Aryan Rana</title>
     <script type="text/javascript">
     // Single Page Apps for GitHub Pages
-      var pathSegmentsToKeep = 1;
+    // pathSegmentsToKeep = 1, if you app is on giyhub.io subdomain under url /{path} (single url extension)
+    // on custom domain when the site is on "/" this value is pathSegmentsToKeep = 0
+      var pathSegmentsToKeep = 0;
 
       var l = window.location;
       l.replace(
