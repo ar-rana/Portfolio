@@ -9,14 +9,9 @@ import chatApp from "../assets/projects/chatApp.png";
 import board from "../assets/projects/board.png";
 import defaultImg from "../assets/projects/defaultImg.png";
 import ecommerce from "../assets/projects/ecommerce.png";
+import disasterSys from "../assets/projects/disasterSys.png";
 
 export const projects: ProjectPanel[] = [
-  {
-    title: "Collaborative Whiteboard",
-    techStk: "React, HTML Canvas, Spring Boot, STOMP Websockets, Redis",
-    github: "https://github.com/ar-rana/Whiteboard-App",
-    img: board,
-  },
   {
     title: "Enterprise E-Commerce Application",
     techStk:
@@ -25,8 +20,28 @@ export const projects: ProjectPanel[] = [
     img: ecommerce,
   },
   {
+    title: "Disaster Relief System",
+    techStk:
+      "React, Spring Boot, Redis, RabbitMQ, Spring Data JPA, PostgreSQL, Spring AI, OpenStreetMap, GraphHopper",
+    github: "https://github.com/ar-rana/Disaster-Relief-System",
+    img: disasterSys,
+  },
+  {
+    title: "Collaborative Whiteboard",
+    techStk: "React, HTML Canvas, Spring Boot, STOMP Websockets, Redis",
+    github: "https://github.com/ar-rana/Whiteboard-App",
+    img: board,
+  },
+  {
+    title: "ChatApp-2.0 (Scalable Chat Application)",
+    techStk:
+      "Next.js v14, TailwindCSS, Socket.io, Node, ExpressJS, Redis, Kafka, Prisma, PostgreSQL, OAuth",
+    github: "https://github.com/ar-rana/ChatApp-2.0",
+    img: chatApp,
+  },
+  {
     title: "Spring Search",
-    techStk: "React, Modular CSS, Spring Boot, Spring AI, Ollama",
+    techStk: "React, Modular CSS, Spring Boot, Spring AI, Ollama, OAuth",
     github: "https://github.com/ar-rana/SpringSearch",
     img: spring,
     project_link: "https://spring-search.vercel.app/",
@@ -38,13 +53,6 @@ export const projects: ProjectPanel[] = [
     img: algoVis,
     project_link:
       "https://path-visualizer-git-main-aryan-ranas-projects.vercel.app/",
-  },
-  {
-    title: "ChatApp-2.0 (Scalable Chat Application)",
-    techStk:
-      "Next.js v14, TailwindCSS, Socket.io, Node, ExpressJS, Redis, Kafka, Prisma",
-    github: "https://github.com/ar-rana/ChatApp-2.0",
-    img: chatApp,
   },
   {
     title: "Twitter Clone",

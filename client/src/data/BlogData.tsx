@@ -7,7 +7,7 @@ export const blogs: BlogPanel[] = [
     title:
       "A Novel Task Scheduling Algorithm in Heterogeneous Multi-cloud Environment",
     date: "22 November, 2024",
-    desc: "The Proposed algorithm is observed to have a better makespan in 70% of cases and cloud utilization in 65% of cases.",
+    desc: "The Proposed 2-phased algorithm for cloud task scheduling.",
     img: RD,
     article_link: "https://link.springer.com/chapter/10.1007/978-981-97-7880-5_13",
   },
