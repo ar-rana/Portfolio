@@ -12,10 +12,10 @@ const AboutView = () => {
       </span>
       <br />
       <span className={styles.about_text}>
-        I was interrest in the field of Computer Science since my middle school the idea
-        of being able to create anything from scratch as you like always facinated me. 
-        I started my proper coding journey in 2022, with a basic HTML&CSS website. Since 
-        then, I have made several projects, including one with more than 10,000 lines of code in my second year. 
+        I've been interested in computer science since middle school. 
+        The idea to create something from scratch shaping it exactly the way you imagine has always fascinated me. 
+        I started my coding journey properly in 2022, with a basic HTML&CSS website. Since 
+        then, I have made several projects, including one with more than 10,000 lines of code in the beginning of my second year. 
         And currently I am enjoying my time learning Cloud technologies.
       </span>
       <br />
