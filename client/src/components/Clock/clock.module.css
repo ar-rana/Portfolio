@@ -60,3 +60,21 @@
   height: 50%;
   border-radius: 8px;
 }
+
+@media (max-width: 650px) {
+  .container {
+    top: 1.5%;
+    right: 1.5%;
+  }
+  .clock {
+    width: 8rem;
+    height: 8rem;
+    border: 1.5px solid white;
+  }
+  .clock span b {
+    font-size: 8px;
+  }
+  .clock span {
+    inset: 2px;
+  }
+}
