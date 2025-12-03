@@ -10,6 +10,7 @@ import board from "../assets/projects/board.png";
 import defaultImg from "../assets/projects/defaultImg.png";
 import ecommerce from "../assets/projects/ecommerce.png";
 import disasterSys from "../assets/projects/disasterSys.png";
+import scribeAI from "../assets/projects/scribeAI.png";
 
 export const projects: ProjectPanel[] = [
   {
@@ -27,6 +28,13 @@ export const projects: ProjectPanel[] = [
     img: disasterSys,
   },
   {
+    title: "ScribeAI",
+    techStk:
+      "Next.js, XState, Node.js, Express, Socket.io, RabbitMQ, PostgreSQL, Prisma, Better Auth, TailwindCSS, Gemini API",
+    github: "https://github.com/ar-rana/ScribeAI",
+    img: scribeAI,
+  },
+  {
     title: "Collaborative Whiteboard",
     techStk: "React, HTML Canvas, Spring Boot, STOMP Websockets, Redis",
     github: "https://github.com/ar-rana/Whiteboard-App",
@@ -35,7 +43,7 @@ export const projects: ProjectPanel[] = [
   {
     title: "ChatApp-2.0 (Scalable Chat Application)",
     techStk:
-      "Next.js v14, TailwindCSS, Socket.io, Node, ExpressJS, Redis, Kafka, Prisma, PostgreSQL, OAuth",
+      "Next.js v14, TailwindCSS, Socket.io, Node.js, ExpressJS, Redis, Kafka, Prisma, PostgreSQL, OAuth",
     github: "https://github.com/ar-rana/ChatApp-2.0",
     img: chatApp,
   },
@@ -63,7 +71,7 @@ export const projects: ProjectPanel[] = [
   },
   {
     title: "Sports Management Portal",
-    techStk: "React, Firebase Storage & Firestore, ExpressJs, NodeJs",
+    techStk: "React, Firebase Storage & Firestore, ExpressJs, Node.js",
     github: "https://github.com/ar-rana/Sports-Management-Portal",
     img: sportsManage,
     project_link: "https://sports-management-portal.vercel.app/",
@@ -77,7 +85,7 @@ export const projects: ProjectPanel[] = [
   // {
   //   title: "Monster Hunter - Arcade Game",
   //   techStk: "HTML, CSS, JS",
-  //   github: "https://github.com/ar-rana/inclusive-education-FrontendWebsite",
+  //   github: "https://github.com/ar-rana/MonsterHunter",
   //   img: mhag,
   //   project_link: "https://monster-hunter-aryan-ranas-projects.vercel.app/",
   // },
