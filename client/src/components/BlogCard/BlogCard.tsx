@@ -27,7 +27,7 @@ const BlogCard: React.FC<Blog> = ({ blog }) => {
         <div className={styles.frontView}>
           <img src={blog.img} />
           <div className={styles.text}>
-            <b style={{ fontSize: "16px" }}>{blog.title}</b>
+            <b style={{ fontSize: "15px", fontWeight: "medium" }}>{blog.title}</b>
             <b>{blog.date}</b>
           </div>
         </div>
